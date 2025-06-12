@@ -359,3 +359,56 @@ body {
     margin-right: 5px;
     vertical-align: middle;
 }
+/* Add to style (4).css */
+
+#export-controls {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 10px; /* Space between elements */
+    margin-top: 20px;
+    justify-content: center; /* Center the controls */
+    align-items: flex-end; /* Align items to the bottom if they have different heights */
+}
+
+.date-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px; /* Adjust spacing */
+}
+
+.date-input-group label {
+    font-size: 0.9em;
+    margin-bottom: 3px;
+    color: var(--dark-text);
+}
+
+#start-date-input,
+#end-date-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    width: 150px; /* Adjust width as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#export-pdf-btn {
+    /* Existing styles for the button, just ensure it fits well here */
+    flex-grow: 1; /* Allows the button to grow and fill space */
+    max-width: 200px; /* Limit button width */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    #export-controls {
+        flex-direction: column;
+        align-items: stretch; /* Stretch items to full width */
+    }
+
+    #start-date-input,
+    #end-date-input,
+    #export-pdf-btn {
+        width: 100%; /* Full width on small screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+}
